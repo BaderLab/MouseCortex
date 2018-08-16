@@ -1,0 +1,26 @@
+citHeader("To cite this data in publications, please cite the following source paper:")
+
+citEntry(entry = "Article",
+  title        = "Developmental emergence of adult neural stem cells as revealed by single cell transcriptional profiling",
+  author       = personList(as.person("Scott A. Yuzwa"),
+                            as.person("Michael J. Borrett"),
+                            as.person("Brendan T. Innes"),
+                            as.person("Anastassia Voronova"),
+                            as.person("Troy Ketela"),
+                            as.person("David R. Kaplan"),
+                            as.person("Gary D. Bader"),
+                            as.person("Freda D. Miller")),
+  journal      = "Cell Reports",
+  year         = "2017",
+  volume       = "21",
+  number       = "13",
+  pages        = "3970--3986",
+  url          = "https://doi.org/10.1016/j.celrep.2017.12.017",
+
+  textVersion  =
+  paste("Scott A. Yuzwa, Michael J. Borrett, Brendan T. Innes, Anastassia Voronova,",
+        "Troy Ketela, David R. Kaplan, Gary D. Bader, Freda D. Miller (2017).",
+        "Developmental emergence of adult neural stem cells as revealed by single cell transcriptional profiling.",
+        "Cell Reports, 21(13), 3970-3986.",
+        "DOI https://doi.org/10.1016/j.celrep.2017.12.017")
+)
