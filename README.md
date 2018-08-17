@@ -22,32 +22,32 @@ adult NSC occurs during late neurogenesis.
 There are four files representing scRNAseq data from mouse embryonic 
 cortically-derived cells from E11.5 to E17.5.  
 You can install this package by running:
-```
+```{r}
+install.packages("devtools")
 devtools::install_github("BaderLab/MouseCortex")
 ```
-It takes a while for this command to run, since github is compressing the input data 
-prior to downloading and installing.
+It takes a while for this command to run, since data files are larger than your usual github code.
 
 The files included are:  
-- E11.5: e11cortical_forViz.RData
-- E13.5: e13cortical_forViz.RData
-- E15.5: e15cortical_forViz.RData
-- E17.5: e17cortical_forViz.RData
+- E11.5: e11cortical.RData
+- E13.5: e13cortical.RData
+- E15.5: e15cortical.RData
+- E17.5: e17cortical.RData
 
 To view the data in [*scClustViz*](https://baderlab.github.io/scClustViz), it must also 
 be installed by running:  
-```
+```{r}
 devtools::install_github("BaderLab/scClustViz")
 ```
 Installing *org.Mm.eg.db* from Bioconductor is also suggested for annotation purposes:
-```
+```{r}
 source("https://bioconductor.org/biocLite.R")
 biocLite("org.Mm.eg.db")
 ```
 Then the data can be viewed in the *scClustViz* Shiny app by running:
-```
+```{r}
 runShiny(system.file("e15cortical_forViz.RData",package="MouseCortex"),
-         # You can replace "e15cortical_forViz.RData" with any of the files above.
+         # You can replace "e15cortical.RData" with any of the files above.
          annotationDB="org.Mm.eg.db",
          # This is an optional argument, but if present will add genenames to some figures.
          cellMarkers=list("Cortical precursors"=c("Mki67","Sox2","Pax6","Pcna","Nes","Cux1","Cux2"),

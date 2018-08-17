@@ -1,10 +1,11 @@
 Package: MouseCortex
 Type: Package
 Title: Developmental emergence of adult neural stem cells as revealed by single cell transcriptional profiling
-Version: 0.1.0
+Version: 1.0.0
+Date: 2018-08-17
 Author: c(as.person("Scott A. Yuzwa"),
           as.person("Michael J. Borrett"),
-          as.person("Brendan T. Innes <brendan.innes@mail.utoronto.ca>"),
+          as.person("Brendan T. Innes"),
           as.person("Anastassia Voronova"),
           as.person("Troy Ketela"),
           as.person("David R. Kaplan"),
