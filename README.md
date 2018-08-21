@@ -19,20 +19,14 @@ from embryogenesis through to adulthood and wherein the transition to a quiescen
 adult NSC occurs during late neurogenesis.
 
 ## Usage
-There are four files representing scRNAseq data from mouse embryonic 
-cortically-derived cells from E11.5 to E17.5.  
+There are four datasets representing scRNAseq data from mouse embryonic 
+cortically-derived cells from embryonic days 11.5, 13.5, 15.5, and 17.5.  
 You can install this package by running:
 ```{r}
 install.packages("devtools")
 devtools::install_github("BaderLab/MouseCortex")
 ```
 It takes a while for this command to run, since data files are larger than your usual github code.
-
-The files included are:  
-- E11.5: e11cortical.RData
-- E13.5: e13cortical.RData
-- E15.5: e15cortical.RData
-- E17.5: e17cortical.RData
 
 To view the data in [*scClustViz*](https://baderlab.github.io/scClustViz), it must also 
 be installed by running:  
@@ -46,19 +40,7 @@ biocLite("org.Mm.eg.db")
 ```
 Then the data can be viewed in the *scClustViz* Shiny app by running:
 ```{r}
-runShiny(system.file("e15cortical_forViz.RData",package="MouseCortex"),
-         # You can replace "e15cortical.RData" with any of the files above.
-         annotationDB="org.Mm.eg.db",
-         # This is an optional argument, but if present will add genenames to some figures.
-         cellMarkers=list("Cortical precursors"=c("Mki67","Sox2","Pax6","Pcna","Nes","Cux1","Cux2"),
-                          "Interneurons"=c("Gad1","Gad2","Npy","Sst","Lhx6","Tubb3","Rbfox3","Dcx"),
-                          "Cajal-Retzius neurons"="Reln",
-                          "Intermediate progenitors"="Eomes",
-                          "Projection neurons"=c("Tbr1","Satb2","Fezf2","Bcl11b","Tle4",
-                                                 "Nes","Cux1","Cux2","Tubb3","Rbfox3","Dcx"))
-         # This is a list of canonical marker genes per expected cell type in the data.
-         # The app uses this (optional) list to automatically annotate clusters.
-         )
+viewMouseCortex("e11")
 ```
 *scClustViz* is a visualization tool for single-cell RNAseq designed to assess clustering results 
 for biological relevance using a metric based on differential gene expression between clusters. It 
