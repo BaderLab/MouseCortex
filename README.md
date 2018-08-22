@@ -28,19 +28,14 @@ devtools::install_github("BaderLab/MouseCortex")
 ```
 It takes a while for this command to run, since data files are larger than your usual github code.
 
-To view the data in [*scClustViz*](https://baderlab.github.io/scClustViz), it must also 
-be installed by running:  
+Then the data can be viewed in the [*scClustViz*](https://baderlab.github.io/scClustViz) Shiny app by running:
 ```{r}
-devtools::install_github("BaderLab/scClustViz")
+viewMouseCortex("e11")
 ```
 Installing *org.Mm.eg.db* from Bioconductor is also suggested for annotation purposes:
 ```{r}
 source("https://bioconductor.org/biocLite.R")
 biocLite("org.Mm.eg.db")
-```
-Then the data can be viewed in the *scClustViz* Shiny app by running:
-```{r}
-viewMouseCortex("e11")
 ```
 *scClustViz* is a visualization tool for single-cell RNAseq designed to assess clustering results 
 for biological relevance using a metric based on differential gene expression between clusters. It 
