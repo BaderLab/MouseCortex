@@ -20,7 +20,7 @@ adult NSC occurs during late neurogenesis.
 
 ## Usage
 There are four datasets representing scRNAseq data from mouse embryonic 
-cortically-derived cells from embryonic days 11.5, 13.5, 15.5, and 17.5.  
+cortically-derived cells from embryonic days 11.5 (e11), 13.5 (e13), 15.5 (e15), and 17.5 (e17).  
 You can install this package by running:
 ```{r}
 install.packages("devtools")
