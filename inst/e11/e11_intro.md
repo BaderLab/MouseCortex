@@ -16,4 +16,5 @@ Adult neural stem cells (NSCs) derive from embryonic precursors, but little
     findings support a model wherein cortical RPs maintain a core transcriptional identity 
     from embryogenesis through to adulthood and wherein the transition to a quiescent 
     adult NSC occurs during late neurogenesis.  
-These are embryonic day 11.5 cortically-derived cells.  
+    
+These are embryonic day 11.5 cortically-derived cells.

@@ -2,7 +2,7 @@
 Scott A. Yuzwa, Michael J. Borrett, Brendan T. Innes, Anastassia Voronova, Troy Ketela, David R. Kaplan, Gary D. Bader, and Freda D. Miller.  
 Cell Reports (2017).  
 Data portal by [scClustViz](https://baderlab.github.io/scClustViz).  
-### Abstract
+### Abstract  
 Adult neural stem cells (NSCs) derive from embryonic precursors, but little 
     is known about how or when this occurs. We have addressed this issue using single-cell 
     RNA sequencing at multiple developmental time points to analyze the embryonic murine 
@@ -16,4 +16,5 @@ Adult neural stem cells (NSCs) derive from embryonic precursors, but little
     findings support a model wherein cortical RPs maintain a core transcriptional identity 
     from embryogenesis through to adulthood and wherein the transition to a quiescent 
     adult NSC occurs during late neurogenesis.  
-These are embryonic day 17.5 cortically-derived cells.  
+
+These are embryonic day 17.5 cortically-derived cells.
