@@ -19,8 +19,7 @@
 #'   viewMouseCortex("e11")
 #'
 #' @seealso \url{https://baderlab.github.io/scClustViz} for information on
-#'   \code{scClustViz}. Install by running
-#'   \code{devtools::install_github("BaderLab/scClustViz")}.
+#'   \code{scClustViz}.
 #'
 #' @export
 

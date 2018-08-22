@@ -30,6 +30,5 @@ A wrapper function to view one of the four \code{MouseCortex} datasets in the
 }
 \seealso{
 \url{https://baderlab.github.io/scClustViz} for information on
-  \code{scClustViz}. Install by running
-  \code{devtools::install_github("BaderLab/scClustViz")}.
+  \code{scClustViz}.
 }
