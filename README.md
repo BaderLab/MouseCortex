@@ -30,7 +30,7 @@ It takes a while for this command to run, since data files are larger than your 
 
 Then the data can be viewed in the [*scClustViz*](https://baderlab.github.io/scClustViz) Shiny app by running:
 ```{r}
-viewMouseCortex("e11")
+MouseCortex::viewMouseCortex("e11")
 ```
 Installing *org.Mm.eg.db* from Bioconductor is also suggested for annotation purposes:
 ```{r}
