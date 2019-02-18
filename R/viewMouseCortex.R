@@ -7,10 +7,12 @@
 #'   different datasets in this package, which each represent an embryonic day
 #'   during mouse development from which the cerebral cortex was dissected and
 #'   single-cell RNAseq data collected.
-#'
 #' @param outPath Default = "./" (the working directory). Specify the directory
 #'   used to save/load any analysis files you generate while exploring the
 #'   \code{MouseCortex} data.
+#' @param ... Named options that should be passed to the
+#'   \code{\link[shiny]{runApp}} call (these can be any of the following:
+#'   "port", "launch.browser", "host", "quiet", "display.mode" and "test.mode").
 #'
 #' @return The function causes the scClustViz Shiny GUI app to open in a
 #'   seperate window.
@@ -23,7 +25,7 @@
 #'
 #' @export
 
-viewMouseCortex <- function(timepoint,outPath="./") {
+viewMouseCortex <- function(timepoint,outPath="./",...) {
   if (!timepoint %in% c("e11","e13","e15","e17")) {
     stop('timepoint must be one of "e11", "e13", "e15", "e17"')
   }
@@ -45,11 +47,13 @@ viewMouseCortex <- function(timepoint,outPath="./") {
     scClustViz::runShiny(filePath=filePath,
                          outPath=outPath,
                          cellMarkers=cellMarkers,
-                         annotationDB=annotationDB)
+                         annotationDB=annotationDB,
+                         ...)
 
   } else {
     scClustViz::runShiny(filePath=filePath,
                          outPath=outPath,
-                         cellMarkers=cellMarkers)
+                         cellMarkers=cellMarkers,
+                         ...)
   }
 }
