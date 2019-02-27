@@ -4,7 +4,7 @@
 \alias{viewMouseCortex}
 \title{View MouseCortex data in the scClustViz Shiny app}
 \usage{
-viewMouseCortex(timepoint, outPath = "./")
+viewMouseCortex(timepoint, outPath = "./", ...)
 }
 \arguments{
 \item{timepoint}{One of "e11", "e13", "e15", "e17".  Referring to the
@@ -15,6 +15,10 @@ single-cell RNAseq data collected.}
 \item{outPath}{Default = "./" (the working directory). Specify the directory
 used to save/load any analysis files you generate while exploring the
 \code{MouseCortex} data.}
+
+\item{...}{Named options that should be passed to the
+\code{\link[shiny]{runApp}} call (these can be any of the following:
+"port", "launch.browser", "host", "quiet", "display.mode" and "test.mode").}
 }
 \value{
 The function causes the scClustViz Shiny GUI app to open in a
