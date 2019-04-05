@@ -10,6 +10,11 @@
 #' @param outPath Default = "./" (the working directory). Specify the directory
 #'   used to save/load any analysis files you generate while exploring the
 #'   \code{MouseCortex} data.
+#' @param imageFileType Default="pdf". The file format for saved figures. One of
+#'   \code{"pdf"} (generated with \code{\link[grDevices]{cairo_pdf}}),
+#'   \code{"eps"} (generated with \code{\link[grDevices]{cairo_ps}}),
+#'   \code{"tiff"} (generated with \code{\link[grDevices]{tiff}}), or
+#'   \code{"png"} (generated with \code{\link[grDevices]{png}}).
 #' @param ... Named options that should be passed to the
 #'   \code{\link[shiny]{runApp}} call (these can be any of the following:
 #'   "port", "launch.browser", "host", "quiet", "display.mode" and "test.mode").
@@ -25,7 +30,7 @@
 #'
 #' @export
 
-viewMouseCortex <- function(timepoint,outPath="./",...) {
+viewMouseCortex <- function(timepoint,outPath="./",imageFileType="pdf",...) {
   if (!timepoint %in% c("e11","e13","e15","e17")) {
     stop('timepoint must be one of "e11", "e13", "e15", "e17"')
   }
@@ -48,12 +53,14 @@ viewMouseCortex <- function(timepoint,outPath="./",...) {
                          outPath=outPath,
                          cellMarkers=cellMarkers,
                          annotationDB=annotationDB,
+                         imageFileType=imageFileType,
                          ...)
 
   } else {
     scClustViz::runShiny(filePath=filePath,
                          outPath=outPath,
                          cellMarkers=cellMarkers,
+                         imageFileType=imageFileType,
                          ...)
   }
 }
